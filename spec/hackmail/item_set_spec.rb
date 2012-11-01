@@ -9,7 +9,7 @@ describe Hackmail::ItemSet do
     set
   }
 
-  its(:mean)   { should eq(5.31) }
+  its(:mean)   { should eq(5.308) }
   its(:median) { should eq(6) }
   its(:mode) { should eq(6) }
 end

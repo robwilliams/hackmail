@@ -3,7 +3,7 @@ module Hackmail
     def mean
       (inject(0.0) { |result, item| 
         result + item.points 
-      } / length).round(2)
+      } / length).round(3)
     end
 
     def median
