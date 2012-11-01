@@ -21,5 +21,9 @@ module Hackmail
         v == frequencies.values.max 
       end.keys.first
     end
+
+    def above_median
+      ItemSet.new(select {|x| x.points > median })
+    end
   end
 end
