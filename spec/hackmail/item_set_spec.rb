@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Hackmail::ItemSet do
   subject {
     set = Hackmail::ItemSet.new
-    %w{1 2 2 3 4 5 6 6 6 7 8 9 10}.each do |i|
+    %w{1 2 2 3 4 6 5 6 6 7 8 9 10}.each do |i|
       set << Hackmail::Item.new({"points" => i})
     end
     set
@@ -11,4 +11,5 @@ describe Hackmail::ItemSet do
 
   its(:mean)   { should eq(5.31) }
   its(:median) { should eq(6) }
+  its(:mode) { should eq(6) }
 end
