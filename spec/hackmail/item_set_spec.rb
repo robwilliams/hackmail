@@ -28,4 +28,16 @@ describe Hackmail::ItemSet do
       subject.above_median.length.should eq(4)
     end
   end
+
+  describe "#to_s" do
+    it "should return a string containing the mean" do
+      subject.to_s.should =~ /#{subject.mean}/
+    end
+    it "should return a string containing the median" do
+      subject.to_s.should =~ /#{subject.median}/
+    end
+    it "should return a string containing the mode" do
+      subject.to_s.should =~ /#{subject.mode}/
+    end
+  end
 end

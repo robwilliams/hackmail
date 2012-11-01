@@ -25,5 +25,11 @@ module Hackmail
     def above_median
       ItemSet.new(select {|x| x.points > median })
     end
+
+    def to_s
+      "Mean:   #{mean}" \
+      "Median: #{median}" \
+      "Mode:   #{mode}"
+    end
   end
 end
