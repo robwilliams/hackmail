@@ -18,5 +18,14 @@ module Hackmail
       @posted_ago = attributes["postedAgo"]
       @posted_by = attributes["postedBy"]
     end
+
+    def to_s
+      "\n========\n" \
+      "#{title}\n" \
+      "#{url}\n" \
+      "#{comment_count} comment(s) - #{points} points\n" \
+      "Posted by: #{posted_by} on #{posted_ago}" \
+      "\n========\n"
+    end
   end
 end
